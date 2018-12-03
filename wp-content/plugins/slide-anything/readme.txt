@@ -18,6 +18,7 @@ Slide Anything allows you to create a carousel/slider where the content for each
 
 Slide Anything has now been rebuilt using Owl Carousel 2, and this now provides many improvements and new features:
 
+* New Lazy Load Images - with this feature enabled, slide images (<img> tags) are only loaded when the relevant slides are displayed (all of the slider's images are NOT loaded up-front).
 * Infinite Looping - a much requested Owl Carousel 2 feature, which means that the first slide is now seamlessly displayed after the last slide without any carousel rewind.
 * New Transition Effects - New Owl Carousel transitions include Slide, Fade, Zoom In, Zoom Out, Flip Out X/Y, Rotate Left/Right, Bounce Out, Roll Out and Slide Down.
 * Slide Link Feature - A new feature which allows you to create a hover-over link button for any slide within your carousels.
@@ -235,6 +236,12 @@ The `SLIDE STYLE` settings are the style settings for each individual slide with
 = 2.1.16 =
 * Small bug fix that relates to Slide Anything PRO only: Sliders with 'autoplay' enabled were re-starting autoplay when popups were closed.
 
+= 2.1.17 =
+* Added a new feature to facilitate owl-carousel 'Lazy Load' images. With this feature enabled, slide images (<img> tags) are only loaded when the relevant slides are displayed (all of the slider's images are NOT loaded up-front).
+
+= 2.1.18 =
+* Bug Fix - There was an issue on mobile phones when autoplay is disabled, and when you swipe to change current slide then autoplay starts up. This has now been fixed.
+
 == Upgrade Notice ==
 
 = 1.0 =
@@ -385,3 +392,9 @@ The `SLIDE STYLE` settings are the style settings for each individual slide with
 
 = 2.1.16 =
 * Small bug fix that relates to Slide Anything PRO only: Sliders with 'autoplay' enabled were re-starting autoplay when popups were closed.
+
+= 2.1.17 =
+* Added a new feature to facilitate owl-carousel 'Lazy Load' images. With this feature enabled, slide images (<img> tags) are only loaded when the relevant slides are displayed (all of the slider's images are NOT loaded up-front).
+
+= 2.1.18 =
+* Bug Fix - There was an issue on mobile phones when autoplay is disabled, and when you swipe to change current slide then autoplay starts up. This has now been fixed.

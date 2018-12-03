@@ -1692,6 +1692,21 @@ function cpt_slider_style_content($post) {
 	}
 	echo "</div>\n";
 
+	// Enable Lazy Load Images
+	$lazy_load_images = get_post_meta($post->ID, 'sa_lazy_load_images', true);
+	if ($lazy_load_images == '') {
+		$lazy_load_images = '0';
+	}
+	$tooltip = "Enable &quot;Lazy Load&quot; for images added to your slide content (note: does not apply to slide backgrounds).";
+	echo "<div id='sa_window_onload_line'>";
+	echo "<span class='sa_tooltip' title='".$tooltip."'></span><span style='min-width:160px;'>Enable 'Lazy Load' Images:</span>";
+	if ($lazy_load_images == '1') {
+		echo "<input type='checkbox' id='sa_lazy_load_images' name='sa_lazy_load_images' value='1' checked/>";
+	} else {
+		echo "<input type='checkbox' id='sa_lazy_load_images' name='sa_lazy_load_images' value='1'/>";
+	}
+	echo "</div>\n";
+
 	echo "</div>\n";
 }
 
@@ -2077,6 +2092,11 @@ function cpt_slider_save_postdata() {
 			update_post_meta($post->ID, 'sa_strip_javascript', '1');
 		} else {
 			update_post_meta($post->ID, 'sa_strip_javascript', '0');
+		}
+		if (isset($_POST['sa_lazy_load_images']) && ($_POST['sa_lazy_load_images'] == '1')) {
+			update_post_meta($post->ID, 'sa_lazy_load_images', '1');
+		} else {
+			update_post_meta($post->ID, 'sa_lazy_load_images', '0');
 		}
 	}
 }
